@@ -17,7 +17,6 @@ async function createTodo(data:FormData) {
 }
 
 export default function page(){
-    console.log('Add page called');
     
     return(
         <div className="create-container container mx-auto py-5 text-center">
