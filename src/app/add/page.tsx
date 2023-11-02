@@ -1,4 +1,6 @@
 import { prisma } from "@/db";
+import { redirect } from "next/navigation";
+
 async function createTodo(data:FormData) {
     "use server"
     console.log('calledfn');
@@ -11,7 +13,7 @@ async function createTodo(data:FormData) {
     }
     
     await prisma.todo.create({data:{title, complete: false}})
-    
+    redirect('/')
 }
 
 export default function page(){
